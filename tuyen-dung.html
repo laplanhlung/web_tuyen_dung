@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tuyển Dụng - VietCredit</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .header {
+      background-color: #e0001a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .logo {
+      font-size: 2em;
+      font-weight: bold;
+    }
+    .container {
+      width: 80%;
+      margin: 20px auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #e0001a;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: calc(100% - 12px);
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #e0001a;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    button:hover {
+      background-color: #c80017;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #e0001a;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+    .footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">VietCredit Tuyển Dụng (Demo)</div>
+    <p>Cùng bạn xây dựng tương lai</p>
+  </div>
+
+  <div class="container">
+    <h2>Thông Tin Ứng Tuyển</h2>
+    <form id="recruitmentForm">
+      <div class="form-group">
+        <label for="fullName">Họ và tên:</label>
+        <input type="text" id="fullName" name="fullName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Địa chỉ email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Số điện thoại:</label>
+        <input type="text" id="phone" name="phone">
+      </div>
+
+      <div class="form-group">
+        <label for="position">Vị trí ứng tuyển:</label>
+        <input type="text" id="position" name="position">
+      </div>
+
+      <div class="form-group">
+        <label for="message">Lời nhắn/Thông tin thêm:</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+      </div>
+
+      <button type="submit">Gửi Thông Tin</button>
+    </form>
+
+    <div id="submissionMessage" style="margin-top: 20px; display: none; color: green;">
+      Cảm ơn bạn đã ứng tuyển! Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.
+    </div>
+
+    <a href="index.html" class="back-link">← Quay về Trang Chủ</a>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 VietCredit (Demo) - Tất cả các quyền được bảo lưu.
+  </div>
+
+  <script>
+    document.getElementById('recruitmentForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      document.getElementById('submissionMessage').style.display = 'block';
+      document.getElementById('recruitmentForm').reset();
+    });
+  </script>
+</body>
+</html>
